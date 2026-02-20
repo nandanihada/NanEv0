@@ -95,9 +95,6 @@ export function HeroSection({
     };
   }, [isReducedMotion, registerAnimation, unregisterAnimation, hasAnimatedImage]);
 
-  // Split intro text into words for staggered animation
-  const introWords = introText.split(' ');
-
   return (
     <section
       id="hero"
@@ -144,29 +141,21 @@ export function HeroSection({
               <h1 className="hero-name">{name}</h1>
             </RevealWrapper>
 
-            {/* Intro text with staggered word reveal */}
+            {/* Intro text with fade animation */}
             <RevealWrapper
               direction="fade"
-              delay={0.6}
-              stagger={0.03}
-              staggerChildren
-              duration={theme.animation.duration.fast}
+              delay={0.5}
+              duration={0.8}
             >
-              <p className="hero-intro">
-                {introWords.map((word, index) => (
-                  <span key={index} className="hero-word">
-                    {word}{' '}
-                  </span>
-                ))}
-              </p>
+              <p className="hero-intro">{introText}</p>
             </RevealWrapper>
 
             {/* Optional subtitle */}
             {subtitle && (
               <RevealWrapper
-                direction="up"
-                delay={0.9}
-                duration={theme.animation.duration.normal}
+                direction="fade"
+                delay={0.8}
+                duration={0.8}
               >
                 <p className="hero-subtitle">{subtitle}</p>
               </RevealWrapper>
