@@ -68,7 +68,7 @@ export const portfolioData = {
       id: "ach-1",
       title: "Top 10 Finalist — Unstoppable Hackathon",
       description: "LNMIIT Jaipur — Selected among 200+ teams; identified and resolved 7 real issues in a production repository under competition pressure.",
-      date: "2024",
+      date: "2025",
     },
     {
       id: "ach-2",
